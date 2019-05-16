@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Planet Collection View Controller-->
         <scene sceneID="AMj-wo-Hno">
             <objects>
-                <collectionViewController id="SVj-Yu-ycu" sceneMemberID="viewController">
+                <collectionViewController id="SVj-Yu-ycu" customClass="PlanetCollectionViewController" customModule="Planets" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="O3k-XE-1ap">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                             <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="16"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Planet Cell" id="xdR-1c-lqK" customClass="PlanetCollectionViewCell" customModule="Planets" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlanetCell" id="xdR-1c-lqK" customClass="PlanetCollectionViewCell" customModule="Planets" customModuleProvider="target">
                                 <rect key="frame" x="16" y="16" width="120" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="548" y="176"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="mj3-vX-276">
             <objects>
-                <viewController id="RVm-NF-l5Z" sceneMemberID="viewController">
+                <viewController id="RVm-NF-l5Z" customClass="SettingsViewController" customModule="Planets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iaJ-j3-6cj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,12 +108,18 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OPG-aU-Ls9">
                                         <rect key="frame" x="294" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="SwitchToggled:" destination="RVm-NF-l5Z" eventType="valueChanged" id="WKc-Vt-ffu"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9d-TN-TJY">
-                                <rect key="frame" x="313" y="36" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="322" y="36" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <segue destination="wsi-zp-Lwg" kind="unwind" unwindAction="unwindToCollectionViewSegue:" id="KkS-b5-S2t"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -126,8 +132,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dXT-Tn-x9U"/>
                     </view>
+                    <connections>
+                        <outlet property="Switch" destination="OPG-aU-Ls9" id="er2-1a-MnN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLx-10-VhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="wsi-zp-Lwg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1253.5999999999999" y="175.86206896551727"/>
         </scene>

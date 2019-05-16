@@ -14,6 +14,8 @@
 		9DDBBD19211360D100A55978 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDBBD18211360D100A55978 /* Planet.swift */; };
 		9DDBBD1F211360F500A55978 /* PlanetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDBBD1E211360F500A55978 /* PlanetController.swift */; };
 		F6C832F4228CFD6E0093D840 /* PlanetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C832F3228CFD6E0093D840 /* PlanetCollectionViewCell.swift */; };
+		F6C832F6228CFE9D0093D840 /* PlanetCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C832F5228CFE9D0093D840 /* PlanetCollectionViewController.swift */; };
+		F6C832F8228CFF240093D840 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C832F7228CFF240093D840 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		9DDBBD18211360D100A55978 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		9DDBBD1E211360F500A55978 /* PlanetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetController.swift; sourceTree = "<group>"; };
 		F6C832F3228CFD6E0093D840 /* PlanetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCollectionViewCell.swift; sourceTree = "<group>"; };
+		F6C832F5228CFE9D0093D840 /* PlanetCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlanetCollectionViewController.swift; path = "Planets/Model Controller/PlanetCollectionViewController.swift"; sourceTree = SOURCE_ROOT; };
+		F6C832F7228CFF240093D840 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = "Planets/Model Controller/SettingsViewController.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,8 @@
 		27F670EB21EFC6AA0035C1BF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F6C832F5228CFE9D0093D840 /* PlanetCollectionViewController.swift */,
+				F6C832F7228CFF240093D840 /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -86,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				9DDBBD0A2113609700A55978 /* Main.storyboard */,
+				F6C832F3228CFD6E0093D840 /* PlanetCollectionViewCell.swift */,
 				9DDBBD0D2113609800A55978 /* Assets.xcassets */,
 				9DDBBD0F2113609800A55978 /* LaunchScreen.storyboard */,
 				9DDBBD122113609800A55978 /* Info.plist */,
@@ -97,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				9DDBBD1E211360F500A55978 /* PlanetController.swift */,
-				F6C832F3228CFD6E0093D840 /* PlanetCollectionViewCell.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -176,8 +182,10 @@
 			files = (
 				F6C832F4228CFD6E0093D840 /* PlanetCollectionViewCell.swift in Sources */,
 				9DDBBD1F211360F500A55978 /* PlanetController.swift in Sources */,
+				F6C832F6228CFE9D0093D840 /* PlanetCollectionViewController.swift in Sources */,
 				9DDBBD072113609700A55978 /* AppDelegate.swift in Sources */,
 				9DDBBD19211360D100A55978 /* Planet.swift in Sources */,
+				F6C832F8228CFF240093D840 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +330,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = 8492LT54LT;
 				INFOPLIST_FILE = "$(SRCROOT)/Planets/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -340,7 +348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = 8492LT54LT;
 				INFOPLIST_FILE = "$(SRCROOT)/Planets/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
